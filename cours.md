@@ -90,6 +90,12 @@ Si jamais on se trompe et qu'on veut mettre url :
 Pour avoir des données qu'on ne veut pas mettre sur github car c'est secret, faire un fichier `.gitignore`
 => tous ce qu'on va lister (mettre le nom des fichiers que l'on veut masquer) va être ignorer du tracking GIT
 
+Pour récupérer le code d'un github :
+```
+    git pull 
+``` 
+Ensuite on mets le lien de repository
+
 # Commande bash
 
 Création d’un dossier en cmd
@@ -99,7 +105,6 @@ Linux ou (git bash) :
 - ⇒ `mkdir nom_dossier` : créer un dossier (make a dir)
 - ⇒ `cd nom_dossier` : pour aller dans le dossier
 - ⇒ `code .` : permet d’aller sur vscode
-- ⇒ `touch linux_commands.md`
 
 Autres commandes :
 - `pwd` : le chemin depuis la racine
