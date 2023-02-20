@@ -54,14 +54,15 @@ Maintenant on va regarder l'historique des commits avec :
 ```
     git log
 ```
-<image src='./assets/cycle_de_la_vie_fichier.png'>
-Untraked (non suivi) : quand le fichier vient d'être créer
+<image src='./assets/cycle_de_la_vie_fichier.png'> 
 
-Unmodified : le ficher est dans le git mais n'est pas modifié
+- Untraked (non suivi) : quand le fichier vient d'être créer
 
-Modified : le fichier est modifié
+- Unmodified : le ficher est dans le git mais n'est pas modifié
 
-Staging area : zone dans lquelle je vais accumuler des fichiers nouvellement créés pour un commit 
+- Modified : le fichier est modifié
+
+- Staging area : zone dans lquelle je vais accumuler des fichiers nouvellement créés pour un commit 
 
 Pour sortir de la phase staged : 
 ```
@@ -94,7 +95,7 @@ Pour récupérer le code d'un github :
 ```
     git pull 
 ``` 
-Ensuite on mets le lien de repository
+Ensuite on mets le lien du repository que l'on veut récupérer
 
 # Commande bash
 
