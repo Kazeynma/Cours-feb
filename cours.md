@@ -14,12 +14,12 @@ La commande
 ```
     git init 
 ```
-permet  d'initialiser un depot GIT. Elle retourne :
+permet  d'initialiser un depot GIT ou le repository (le dossier qui contient les données que l'on souhaite versionner) dans le répertoire courant. Cela se traduit par la présence d'un dossier cache `.git/`. Elle retourne :
 ```
 Initialized empty Git repository in C:/Users/Mywin/BTS/.git/
 ```
 
-Pour vérifier l'état de votre depot GIT utiliser la commande : 
+Pour vérifier l'état de votre depot GIT ( ajout et l'édition d'un fichier ) utiliser la commande : 
 ```
     git status
 ```
@@ -35,6 +35,7 @@ Commit : permet de sauvegarder un ou plusieurs fichiers
 ```
     git commit 
 ```
+On mets `i` et en dessous il y a écrit "INSERT" et on peut mettre notre message.
 
 
 Pour configurer son git 
@@ -51,8 +52,13 @@ Maintenant on va regarder l'historique des commits avec :
 ```
     git log
 ```
+Untraked (non suivi) : quand le fichier vient d'être créer
 
-Staging area : zone dans lquelle je vais accumuler des fichiers nouvellement créer pour un commit 
+Unmodified : le ficher est dans le git mais n'est pas modifié
+
+Modified : le fichier est modifié
+
+Staging area : zone dans lquelle je vais accumuler des fichiers nouvellement créés pour un commit 
 
 Pour sortir de la phase staged : 
 ```
