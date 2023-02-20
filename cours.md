@@ -1,4 +1,4 @@
-### Dev web
+# Dev web
 
 Ceci est une commande :
 ``` shell
@@ -9,6 +9,8 @@ Ceci est du code :
 ```javascript
 const test = 'Hello World';
 ```
+
+## Git
 
 La commande 
 ```
@@ -35,7 +37,7 @@ Commit : permet de sauvegarder un ou plusieurs fichiers
 ```
     git commit 
 ```
-On mets `i` et en dessous il y a écrit "INSERT" et on peut mettre notre message.
+On mets `i` et en dessous il y a écrit "INSERT" et on peut mettre notre message. Une fois le message écrit, appuyer sur echap esuite `:q`
 
 
 Pour configurer son git 
@@ -52,6 +54,7 @@ Maintenant on va regarder l'historique des commits avec :
 ```
     git log
 ```
+<image src='./assets/cycle_de_la_vie_fichier.png'>
 Untraked (non suivi) : quand le fichier vient d'être créer
 
 Unmodified : le ficher est dans le git mais n'est pas modifié
@@ -64,3 +67,45 @@ Pour sortir de la phase staged :
 ```
     git commit -m "first commit"
 ```
+Pour mettre notre dépot sur GitHub :
+
+Clé ssh ? Principe : échanger les carte d'identité publique pour donner l'accès // permet d'identifier une machine 
+
+Pour ajouter notre depot sur GitHub
+```
+    git remote add origin git@github.com:Kazeynma/Cours-feb.git
+
+```
+
+Pour voir où est-ce que notre depot est :
+```
+    git remote -v
+```
+
+Si jamais on se trompe et qu'on veut mettre url :
+```
+    git remote rm origin
+```
+
+Pour avoir des données qu'on ne veut pas mettre sur github car c'est secret, faire un fichier `.gitignore`
+=> tous ce qu'on va lister (mettre le nom des fichiers que l'on veut masquer) va être ignorer du tracking GIT
+
+# Commande bash
+
+Création d’un dossier en cmd
+Linux ou (git bash) :
+
+- `ls` : pour voir les fichiers dans le dossier actuel
+- ⇒ `mkdir nom_dossier` : créer un dossier (make a dir)
+- ⇒ `cd nom_dossier` : pour aller dans le dossier
+- ⇒ `code .` : permet d’aller sur vscode
+- ⇒ `touch linux_commands.md`
+
+Autres commandes :
+- `pwd` : le chemin depuis la racine
+- `~` : raccourci vers le dossier utilisateur
+- `ls` : permet d’afficher les fichiers
+    - `ls -la` : permet d’afficher les fichiers cachés / fichiers commençant par un .
+- `rm -rf` : applique à tous les fichiers jusqu’au sous-dossier
+- `cd` : répertoire utilisateur
+- `cat` : permet d’afficher le contenu d’un fichier dans le terminal
