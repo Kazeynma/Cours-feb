@@ -115,3 +115,208 @@ Autres commandes :
 - `rm -rf` : applique à tous les fichiers jusqu’au sous-dossier
 - `cd` : répertoire utilisateur
 - `cat` : permet d’afficher le contenu d’un fichier dans le terminal
+
+
+# HTML & CSS
+
+## Live Server 
+Permet de voir en temps réel les changements fait sur notre page 
+
+## balises 
+*balises d'ouverture et de fermeture (pas toutes)*
+
+- Permet de faire une ligne 
+```html 
+    <hr>
+```
+
+Chaque éléments HTML peut avoir un ou plusieurs attributs :
+``` html 
+    <p id="test"> Ceci est un paragraphe </p>
+    <img src="exempleURl" alt="exemple" title="ceci est un exemple"> 
+```
+L'attribut se situe toujours dans la balise ouvrante.
+
+
+<strong>site de documentation pratique : https://developer.mozilla.org/en-US/</strong>
+
+- Faire des commentaires en HTML :
+```html
+    <!-- Ceci est un commentaire -->
+```
+
+## Concept de parent/enfant
+L'élément <html> est l'élément racine des pages html (le plus haut parent).
+
+Une balise enfant est celle qui se situe à l'intérieur d'une autre balise (son parent)
+
+## Affichage sur une page html
+Tous ce qu'on veut afficher sans les balises <body> 
+
+Terme conteneur : on peut placer du texte, des images, des formulaires, des liens, des tableaux.
+Les conteneurs servent aussi à structurer les pages.
+
+
+### div
+L'élement `<div>` sert à structurer notre page web, c'est un conteneur.
+
+### span
+L'élément `<span>` est souvent utilisé pour avoir des divisions au sein du texte. 
+
+### header
+L'élément `<header>` permet d'avoir une zone pour les entêtes.
+
+### footer
+l'élement `<footer>` permet d'avoir une zone pied de page.
+
+### nav
+L'élément `<nav>` est souvent dans le header et sert à la navigation. Elle peut également être en nagivation secondaire dans le `<footer>`
+
+### main 
+L'élément `<main>` permet d'indiquer le contenu principal de la page. Elle doit être **unique**.
+Elle ne peut pas être utilisée dans les balises `<articles>`, `<aside>`, `<footer>`, `<header>` ou `<nav>`
+
+### section 
+L'élément `<section>` permet de regrouper des éléments partageant la même thématique. Permet d'avoir un contenu structuré.
+
+### les titres 
+Caractérisé par les balises `<h1>`, on peut changer le chiffre après le h et ça corresponds à l'importance décroissante du titre
+
+### les listes
+``` html
+    <ul>
+        <li></li>
+    </ul>
+```
+
+Liste ordonnées
+``` html
+    <ol start="4" type="I">
+        <li></li>
+    </ol>
+```
+
+Tableau :
+``` html
+    <pre>
+        1950    2003    2021
+        oui     non     oui
+    </pre>
+```
+
+### créer des liens et des routes
+``` html
+    <a href="page2.html">Atteindre la page 2</a>
+    <a href="google.com">Google</a>
+```
+Le premier lien est le lien vers une autre page de notre site (cette page est dans notre dossier)
+
+**Ce qu'on peut faire avec** :
+```html
+    <a href="#lien-interne">Atteindre le lien interne</a>
+    ...
+    <div id="lien-interne">Je souhaite atteindre cette div<div>
+```
+On peut rediriger vers une partie de notre site. Ou encore :
+```html
+    <a href="mailto:test@test.fr">mail</a>
+
+```
+On peut faire pareil avec les numéro de téléphone ainsi que des liens de télééchargement.
+
+### img
+Les balises `<img>` permettent d'insérer des images à partir de leur url. Il prends en compte plusieurs attribut comme `alt` qui est un texte alternatif au cas où l'image ne s'afficherait pas
+
+### les formulaire en html
+Les formulaire sont insérées par les balises `<form>`. Il est accompagné de bouton de vlaidation.
+
+Voici les attributs qu'on peux lui donner : 
+- 
+
+
+```html
+    <form>
+        <p>
+            <label for="nom">Veuillez entrez votre nom</label>
+            <input type="text" name="nom" id="nom">
+        </p>
+    </form>
+```
+
+## Le role du CSS
+On peut mettre le style en attribut dans les balises. 
+
+```html
+    <style>
+        .test{
+            font-style : italic
+        }
+    </style>
+```
+
+on peut mettre du css dans l'html dans la balise `<head>`. En lien avec l'attribut `class` d'une balise.
+
+## fichier css
+Faire des commentaires : 
+```CSS
+    /* Ceci est un commentaire */
+```
+
+On fait le lien entre la page html et le css avec les *selecteurs*
+
+```
+    selecteur {
+        props: valeur
+    }
+```
+
+Il y a plusieurs règles concernant les selecteurs.
+
+Plusieurs possibilités:
+```CSS
+    test {
+
+    }
+```
+
+Permet de s'appliquer aux enfants
+
+``` css
+    .columns > * {
+
+    }
+```
+
+## Flex
+Site aide : https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+La flexbox est un container, elle est donc parent. Pour faire en sorte que le container soit une flexbox, il faut mettre : 
+``` css
+    display : flex;
+```
+
+On peut choisir l'organisation des items, donc des enfants présents dans la flexbox avec le paramètre : 
+``` css
+    justify-content
+```
+Elle peut prendre en paramètre : `center`, `space-between`,`space-around`,`space-evenly`,`flex-end`,`flex-start`, `start`,`end`,`right`,`left`,
+
+On peut également mettre donner en paramètres :
+``` css
+    align-items
+```
+Elle prends en paramètres : 
+`stretch`, `flex-start/start/self-start`, `flex-end/end/self-end`, `center`, `baseline`
+
+On peut donner du style au container mais également aux items à l'intérieur du container.
+Par exmeple, on a les paramètres : `flex-shrink` ou `flex-grow` qui influence sur la taille des items les un par rapport aux autres.
+- flex-grow : peut être utilisé pour que l'item prenne toute la place 
+```css
+    .items {
+        flex-grow : 1;
+    }
+```
+l'axe principal et le cross-axis et ça change en fonction de l'orientation
+
+Quand on utilise des attributs, se poser la question :
+- si ça un effet sur le container (la flexbox) ou les items à l'intérieur (ses enfants)
